@@ -1,0 +1,19 @@
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+   const firebaseConfig = {
+     apiKey: " AIzaSyBIFU50U-IJ_v9PaN3u1oii5PxQ3p9JBAg",
+     authDomain: "fursure-9e796.firebaseapp.com",
+     projectId: "fursure-9e796",
+     storageBucket: "fursure-9e796.appspot.com",
+     messagingSenderId: "8114966521",
+     appId: "1:8114966521:web:058af6fdd6111c8c776c68",
+     measurementId: "G-YQKHQQSGSL"
+   };
+
+ const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+export { auth, db };

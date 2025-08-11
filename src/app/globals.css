@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import "tailwindcss";
+
+
+  body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E6F4F1;
+    margin: 0;
+    padding: 0;
+  }
