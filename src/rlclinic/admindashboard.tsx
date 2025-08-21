@@ -54,7 +54,8 @@ const AdminDashboard: React.FC = () => {
       const snapshot = await getDocs(collection(db, "appointments"));
       const data: AppointmentType[] = [];
       snapshot.forEach((doc) => {
-        data.push({ id: doc.id, ...(doc.data() as any) });
+        const docData = doc.data() as Omit<AppointmentType, "id">;
+data.push({ id: doc.id, ...docData });
       });
       setAppointments(data.sort((a, b) => a.date.localeCompare(b.date))); // sort by date
     } catch (error) {
